@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml"><head>
+    <meta charset="UTF-8">
+    <title>Pc</title>
+</head>
+<head>
+    <meta charset="UTF-8">
+    <title>Personale</title>
+</head>
+<body>
+
+<h1>Alle medarbejdere</h1>
+
+<table class="tables" align="center">
+    <thead>
+    <tr>
+        <th>Fornavn</th>
+        <th>Efternavn</th>
+        <th>Telefonnummer</th>
+        <th>Afdeling</th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+    <tr th:each="employee: ${employees}">
+        <!--/*@thymesVar id="employee" type=""*/-->
+        <td th:text="${employee.getFirstName()}"></td>
+        <td th:text="${employee.getLastName()}"></td>
+        <td th:text="${employee.getPhoneNumber()}"></td>
+        <td th:text="${employee.getDepartment()}"></td>
+
+    </tr>
+    </tbody>
+
+</table>
+
+</body>
+</html>

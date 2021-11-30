@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml"><head>
+    <meta charset="UTF-8">
+    <title>Pc</title>
+</head>
+
+<body>
+
+<h1> Alle PC</h1>
+
+<table class="tables" align="center">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Name</th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+    <tr th:each="pc: ${pcs}">
+        <!--/*@thymesVar id="studentId" type=""*/-->
+        <td th:text="${pc.getName()}"></td>
+    </tr>
+
+    </tbody>
+</table>
+
+
+
+</body>
+</html>

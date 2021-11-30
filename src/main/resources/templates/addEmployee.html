@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Tilføj personale</title>
+</head>
+<body>
+
+<form action="#" th:action="@{/addEmployee}" th:object="${employee}" method="post" align="center">
+
+    <p>Fornavn: <input type="text" th:field="*{firstName}"></p>
+    <p>Efternavn: <input type="text" th:field="*{lastName}"></p>
+    <p>Telefonnummer: <input type="number" th:field="*{phoneNumber}"></p>
+    <p>Afdeling: <input type="text" th:field="*{department}"></p>
+
+    <input type="submit" value="Opret medarbejder" class="btn add2">
+
+</form>
+
+
+</body>
+</html>
